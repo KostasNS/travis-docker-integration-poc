@@ -9,7 +9,3 @@ install:
  
 script:
  - docker ps | grep -q tomcat7
- 
-branches:
- only: 
-  - master
