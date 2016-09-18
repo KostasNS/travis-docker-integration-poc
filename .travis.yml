@@ -1,0 +1,12 @@
+sudo: required
+
+services: 
+ - docker
+ 
+install: 
+ - docker build -t tomcat7-poc .
+ - docker run -d -p 127.0.0.1:8080:8080 --name tomcat7 tomcat7-poc
+ 
+script:
+ - docker ps | grep -q tomcat7
+  
